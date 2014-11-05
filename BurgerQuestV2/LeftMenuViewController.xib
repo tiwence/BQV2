@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftMenuViewController">
+            <connections>
+                <outlet property="aboutButton" destination="ePQ-cE-q3y" id="E1g-Pl-2mq"/>
+                <outlet property="authentView" destination="IwP-7X-YE4" id="adm-t7-t3Y"/>
+                <outlet property="helpusButton" destination="s7P-zg-jdK" id="EKD-au-tMo"/>
+                <outlet property="homeButton" destination="AiB-Pw-stg" id="bdk-NU-Fqt"/>
+                <outlet property="lastButton" destination="hBz-dD-OzZ" id="pu2-tC-P0u"/>
+                <outlet property="logoutButton" destination="Eam-UG-Ndi" id="neM-yJ-1kz"/>
+                <outlet property="top10Button" destination="IcA-wf-A2G" id="NmL-CR-fwT"/>
+                <outlet property="userImageView" destination="Jt2-8F-dix" id="Tqz-a5-XLq"/>
+                <outlet property="userNameLabel" destination="oxS-LW-ZKn" id="Xm1-6p-OX4"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Jt2-8F-dix">
+                    <rect key="frame" x="64" y="54" width="90" height="90"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AvatarBorder.png" id="t2y-Sl-wAe">
+                    <rect key="frame" x="64" y="54" width="90" height="90"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oxS-LW-ZKn">
+                    <rect key="frame" x="20" y="152" width="175" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AiB-Pw-stg">
+                    <rect key="frame" x="20" y="212" width="280" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.68627452850000004" green="0.27450981740000002" blue="0.1294117719" alpha="1" colorSpace="deviceRGB"/>
+                    <state key="normal" title="    Around Me" image="P HOME.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="performHome:" destination="-1" eventType="touchUpInside" id="lTd-HN-qr6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IcA-wf-A2G">
+                    <rect key="frame" x="20" y="258" width="280" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.68627452850000004" green="0.27450981740000002" blue="0.1294117719" alpha="1" colorSpace="deviceRGB"/>
+                    <state key="normal" title="    Top 10" image="P 10.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="performTop10:" destination="-1" eventType="touchUpInside" id="AKM-vh-qnZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hBz-dD-OzZ">
+                    <rect key="frame" x="20" y="306" width="280" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.68627452850000004" green="0.27450981740000002" blue="0.1294117719" alpha="1" colorSpace="deviceRGB"/>
+                    <state key="normal" title="    Last" image="P LAST.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="performLast:" destination="-1" eventType="touchUpInside" id="gdT-U4-lxm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ePQ-cE-q3y">
+                    <rect key="frame" x="20" y="354" width="280" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.68627452850000004" green="0.27450981740000002" blue="0.1294117719" alpha="1" colorSpace="deviceRGB"/>
+                    <state key="normal" title="    About" image="P INFO.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="performAbout:" destination="-1" eventType="touchUpInside" id="lJU-cx-3Ms"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="s7P-zg-jdK">
+                    <rect key="frame" x="20" y="402" width="280" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" red="0.68627452850000004" green="0.27450981740000002" blue="0.1294117719" alpha="1" colorSpace="deviceRGB"/>
+                    <state key="normal" title="    Help us" image="P HELP.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Eam-UG-Ndi">
+                    <rect key="frame" x="94" y="484" width="23" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <state key="normal" backgroundImage="LogoutButton.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="performLogout:" destination="-1" eventType="touchUpInside" id="EST-Xm-S1K"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" id="IwP-7X-YE4">
+                    <rect key="frame" x="38" y="47" width="135" height="146"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XW5-dE-fv9">
+                            <rect key="frame" x="17" y="0.0" width="100" height="98"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="AvatarNoSignIn.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="performSignIn:" destination="-1" eventType="touchUpInside" id="PVO-RY-uir"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OMR-fM-hwX">
+                            <rect key="frame" x="0.0" y="105" width="135" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="REGISTER" backgroundImage="BlueBackgroundButton.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="performRegister:" destination="-1" eventType="touchUpInside" id="AMw-H8-ieh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.27450981740000002" green="0.20000001789999999" blue="0.14509804549999999" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeftMenuSeparator.png" id="H3c-le-GhN">
+                    <rect key="frame" x="51" y="245" width="200" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeftMenuSeparator.png" id="brl-jt-wu7">
+                    <rect key="frame" x="51" y="341" width="200" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeftMenuSeparator.png" id="9fB-eY-lfk">
+                    <rect key="frame" x="51" y="387" width="200" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeftMenuSeparator.png" id="6J9-Pb-jFt">
+                    <rect key="frame" x="51" y="294" width="200" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.27450981736183167" green="0.20000001788139343" blue="0.14509804546833038" alpha="1" colorSpace="deviceRGB"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AvatarBorder.png" width="161" height="161"/>
+        <image name="AvatarNoSignIn.png" width="81" height="81"/>
+        <image name="BlueBackgroundButton.png" width="280" height="75"/>
+        <image name="LeftMenuSeparator.png" width="200" height="1"/>
+        <image name="LogoutButton.png" width="23" height="27"/>
+        <image name="P 10.png" width="11" height="14"/>
+        <image name="P HELP.png" width="13" height="13"/>
+        <image name="P HOME.png" width="13" height="13"/>
+        <image name="P INFO.png" width="13" height="13"/>
+        <image name="P LAST.png" width="11" height="13"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

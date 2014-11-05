@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BurgerDetailViewController">
+            <connections>
+                <outlet property="burgerNameLabel" destination="uUp-7J-1Es" id="q6v-eR-mHo"/>
+                <outlet property="burgerPicsPageControl" destination="o0f-0B-idA" id="2oN-QQ-25F"/>
+                <outlet property="hateButton" destination="vz1-6f-qfU" id="uaR-kU-yv5"/>
+                <outlet property="imagesCollectionView" destination="7ed-9c-hyi" id="ynM-qG-J3O"/>
+                <outlet property="infosView" destination="xTM-jQ-FgH" id="Ya9-NO-oUT"/>
+                <outlet property="likeButton" destination="oPD-pJ-IVW" id="tOp-LP-nRN"/>
+                <outlet property="loveButton" destination="5T3-t1-M6f" id="FY6-0G-RBq"/>
+                <outlet property="navigationTitleView" destination="Ikm-nz-CIf" id="eB6-iW-LPL"/>
+                <outlet property="ratingLabel" destination="P7d-o2-OIA" id="xpj-DM-WTR"/>
+                <outlet property="ratingsInfosLabel" destination="3AM-uk-gzn" id="ad5-ix-NLN"/>
+                <outlet property="restaurantNameLabel" destination="0a7-aE-AY1" id="eKU-Oe-aVe"/>
+                <outlet property="scrollView" destination="fXI-PV-J5k" id="6aC-Lc-tJK"/>
+                <outlet property="userPic" destination="LyV-fd-dfw" id="PLa-mq-qOd"/>
+                <outlet property="view" destination="5MF-ZX-oNL" id="vEV-j9-Oau"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.0" contentMode="scaleToFill" id="Ikm-nz-CIf">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a7-aE-AY1">
+                    <rect key="frame" x="20" y="9" width="160" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <view contentMode="scaleToFill" id="5MF-ZX-oNL">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-PV-J5k">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-9c-hyi">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                            <color key="backgroundColor" red="0.96078437569999997" green="0.95686280729999995" blue="0.86666673419999996" alpha="1" colorSpace="deviceRGB"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vs2-TP-5Xr">
+                                <size key="itemSize" width="320" height="240"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="o0f-0B-idA">
+                            <rect key="frame" x="141" y="203" width="39" height="37"/>
+                        </pageControl>
+                        <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTM-jQ-FgH">
+                            <rect key="frame" x="0.0" y="239" width="320" height="75"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyV-fd-dfw">
+                                    <rect key="frame" x="18" y="19" width="36" height="36"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUp-7J-1Es">
+                                    <rect key="frame" x="68" y="13" width="194" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <color key="textColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PictoHeartLike.png" translatesAutoresizingMaskIntoConstraints="NO" id="f2K-DT-MKc">
+                                    <rect key="frame" x="278" y="12" width="30" height="30"/>
+                                </imageView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7d-o2-OIA">
+                                    <rect key="frame" x="278" y="11" width="30" height="30"/>
+                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                    <color key="textColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AM-uk-gzn">
+                                    <rect key="frame" x="290" y="44" width="21" height="21"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <color key="textColor" red="0.72156864399999998" green="0.70588237050000002" blue="0.69019609689999994" alpha="1" colorSpace="deviceRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PictoUser.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Hs-sY-bd1">
+                                    <rect key="frame" x="280" y="49" width="12" height="12"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz1-6f-qfU">
+                            <rect key="frame" x="20" y="342" width="75" height="93"/>
+                            <state key="normal" title="Hate" image="IhateButtonOff.png"/>
+                            <connections>
+                                <action selector="performRating:" destination="-1" eventType="touchUpInside" id="giR-kp-4Ds"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPD-pJ-IVW">
+                            <rect key="frame" x="123" y="342" width="75" height="93"/>
+                            <state key="normal" title="Like" image="IlikeButtonOff.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="performRating:" destination="-1" eventType="touchUpInside" id="0MJ-uA-TaJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T3-t1-M6f">
+                            <rect key="frame" x="225" y="342" width="75" height="98.5"/>
+                            <state key="normal" title="Love" image="IloveButtonOff.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="performRating:" destination="-1" eventType="touchUpInside" id="l6Q-14-khZ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96078437566757202" green="0.95686280727386475" blue="0.86666673421859741" alpha="1" colorSpace="deviceRGB"/>
+                </scrollView>
+                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kz8-LG-U7Z">
+                    <rect key="frame" x="-23" y="-95" width="34" height="26"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="IhateButtonOff.png" width="75" height="93"/>
+        <image name="IlikeButtonOff.png" width="75" height="93"/>
+        <image name="IloveButtonOff.png" width="75" height="93"/>
+        <image name="PictoHeartLike.png" width="61" height="59"/>
+        <image name="PictoUser.png" width="9" height="9"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
