@@ -48,11 +48,6 @@
     //Get API engine
     apiEngine = [[BurgerQuestAppDelegate sharedAppDelegate] apiEngine];
     
-    UIBarButtonItem *shareBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(performAction:)];
-    
-    self.navigationItem.rightBarButtonItem = shareBarButton;
-    shareBarButton = nil;
-    
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationItem.titleView = navigationTitleView;
@@ -60,8 +55,8 @@
     Burger *burger = [[Burger alloc] initWithData:[burgers objectAtIndex:0]];
     self.restaurantNameLabel.text = burger.place.name;
     self.distanceLabel.text = [burger.place getDistanceInMeter];
-    if (burgers.count > 1) self.burgersNumberLabel.text = [NSString stringWithFormat:@"%d burgers", burgers.count];
-    else self.burgersNumberLabel.text = [NSString stringWithFormat:@"%d burger ", burgers.count];
+    if (burgers.count > 1) self.burgersNumberLabel.text = [NSString stringWithFormat:@"%lu burgers", (unsigned long)burgers.count];
+    else self.burgersNumberLabel.text = [NSString stringWithFormat:@"%lu burger ", (unsigned long)burgers.count];
     
     if (burgers != nil && [burgers count] > 0) {
         Burger *burger = [[Burger alloc] initWithData:[burgers objectAtIndex:0]];

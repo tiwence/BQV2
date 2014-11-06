@@ -35,6 +35,9 @@
 
 - (void)configureGalleryCell {
     burgerImageView.clipsToBounds = YES;
+    [burgerImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[burgerImageView]|" options:0 metrics:nil views:@{@"burgerImageView" : burgerImageView}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[burgerImageView]|" options:0 metrics:nil views:@{@"burgerImageView" : burgerImageView}]];
     [burgerImageView setImageWithURL:[NSURL URLWithString:imagePath] placeholderImage:[UIImage imageNamed:@"MapPictureBackground.png"]];
 }
 

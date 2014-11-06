@@ -24,6 +24,7 @@
 #import "BQActivityProvider.h"
 #import "UIColor+UIColor_PXExtentions.h"
 #import "BackgroundLayer.h"
+#import "UIScrollView+APParallaxHeader.h"
 
 @interface BurgerDetailViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UIActionSheetDelegate> {
     Burger *burger;

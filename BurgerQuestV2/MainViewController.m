@@ -65,8 +65,6 @@
     self.burgersListMapTableView.bqAnnotationDelegate = self;
     [self.view addSubview:burgersListMapTableView];
     
-    //[self hideSearchView:NO];
-    
     self.mkMapView = burgersListMapTableView.mapView;
     self.mkMapView.delegate = self;
     [self.mkMapView setShowsUserLocation:YES];
@@ -189,8 +187,6 @@
         
         [locationManager stopUpdatingLocation];
         
-        [self hideSearchView:YES];
-        
         if (userPositionCircle != nil)
             [mkMapView removeOverlay:userPositionCircle];
         else
@@ -222,7 +218,6 @@
 }
 
 - (IBAction)performNewSearch:(id)sender {
-    [self hideSearchView:YES];
     isNewSearch = YES;
     [self requestMapData];
 }
@@ -300,6 +295,9 @@
 }
 
 - (void)requestMapData {
+    
+    [self hideSearchView:YES];
+    
     [mkMapView removeAnnotations:annotations];
     loadingImageView.hidden = NO;
 
@@ -328,6 +326,8 @@
     
     [apiEngine getPath:@"place"
             withParams:params onCompletion:^(NSMutableDictionary *status, NSMutableDictionary *events, NSMutableArray *response) {
+                
+                [self hideSearchView:YES];
                 
                 // Reset la liste des burgers
                 topList = [[NSMutableArray alloc] init];
@@ -452,25 +452,10 @@
 - (void)mapView:(MKMapView *)aMapView regionDidChangeAnimated:(BOOL)animated
 {
     userLocation = [[CLLocation alloc] initWithLatitude:aMapView.region.center.latitude longitude:aMapView.region.center.longitude];
-    
-    if (isFirstLoad) {
-        isFirstLoad = NO;
-        [self hideSearchView:YES];
-    } else if (isNewSearch) {
-        if(![self.burgersListMapTableView isOpened]) {
-            [self hideSearchView:YES];
-            isNewSearch = NO;
-        }
-    } else {
-        if(![self.burgersListMapTableView isOpened])
-            [self hideSearchView:NO];
-        else
-            [self hideSearchView:YES];
-    }
 }
 
-/*-(void)mapView:(MKMapView *)aMapView regionWillChangeAnimated:(BOOL)animated {
-    userLocation = [[CLLocation alloc] initWithLatitude:aMapView.region.center.latitude longitude:aMapView.region.center.longitude];
+-(void)mapView:(MKMapView *)aMapView regionWillChangeAnimated:(BOOL)animated {
+    /*userLocation = [[CLLocation alloc] initWithLatitude:aMapView.region.center.latitude longitude:aMapView.region.center.longitude];
     
     if (isFirstLoad) {
         isFirstLoad = NO;
@@ -485,8 +470,25 @@
             [self hideSearchView:NO];
         else
             [self hideSearchView:YES];
+    }*/
+ 
+    [self hideSearchView:NO];
+    
+    if (isFirstLoad) {
+        isFirstLoad = NO;
+    } else if (isNewSearch) {
+        if(![self.burgersListMapTableView isOpened]) {
+            isNewSearch = NO;
+            [self hideSearchView:NO];
+        }
+    } else {
+        if(![self.burgersListMapTableView isOpened]) {
+            [self hideSearchView:NO];
+        } else {
+            [self hideSearchView:YES];
+        }
     }
-}*/
+}
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     MKMapRect r = [mapView visibleMapRect];

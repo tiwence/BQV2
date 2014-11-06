@@ -135,9 +135,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat scrollOffset = scrollView.contentOffset.y;
     CGRect headerFrame = self.mapView.frame;
-    
-    NSLog(@"Offset %f", scrollOffset);
-    
+        
     if (scrollOffset < 0) {
         headerFrame.origin.y = MIN(kMapHeaderOffsetY - ((scrollOffset / 3)), 0);
         opened = NO;
@@ -146,6 +144,10 @@
             headerFrame.origin.y = kMapHeaderOffsetY - scrollOffset;
         [self.bqAnnotationDelegate hideSearchView:YES];
         opened = YES;
+        
+        float myOffset = scrollOffset + kMapHeaderOffsetY;
+        
+        //NSLog(@"%f | %f", scrollOffset + kMapHeaderOffsetY, self.tableView.frame.origin.y);
         
         if (scrollOffset + kMapHeaderOffsetY >= self.tableView.frame.origin.y) {
             self.tableView.backgroundColor = [UIColor pxColorWithHexValue:@"F7F5E4"];

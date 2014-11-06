@@ -67,7 +67,6 @@
     
     //Set navigation bar button
     UIBarButtonItem *shareBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"PictoShare.png"] style:UIBarButtonItemStylePlain target:self action:@selector(performOldSharing:)];
-    //UIBarButtonItem *shareBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(performOldSharing:)];
     self.navigationItem.rightBarButtonItem = shareBarButton;
     shareBarButton = nil;
     
@@ -81,8 +80,9 @@
     [self setupCollectionView];
     self.imagesCollectionView.dataSource = self;
     self.imagesCollectionView.delegate = self;
-    
+
     self.scrollView.delegate = self;
+    [self.scrollView addParallaxWithView:self.imagesCollectionView andHeight:220.0f];
     
     commentsList = [[NSMutableArray alloc] init];
     [self displayBurgerInfos];
@@ -431,7 +431,7 @@
         float cheight = 0.0f;
         for (int i = 0; i < commentsList.count; i++) {
             Rating *rating = [[Rating alloc] initWithData:[commentsList objectAtIndex:i]];
-            cy = 470.0f + 100.0f * i;
+            cy = 240.0f + 100.0f * i;
             UIView *commentView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, cy, 320.0f, 100.0f)];
             
             BOOL isCurrentUser = NO;

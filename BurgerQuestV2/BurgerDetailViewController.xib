@@ -45,21 +45,11 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-PV-J5k">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-9c-hyi">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
-                            <color key="backgroundColor" red="0.96078437569999997" green="0.95686280729999995" blue="0.86666673419999996" alpha="1" colorSpace="deviceRGB"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vs2-TP-5Xr">
-                                <size key="itemSize" width="320" height="240"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
                         <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="o0f-0B-idA">
-                            <rect key="frame" x="141" y="203" width="39" height="37"/>
+                            <rect key="frame" x="141" y="-30" width="39" height="37"/>
                         </pageControl>
                         <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTM-jQ-FgH">
-                            <rect key="frame" x="0.0" y="239" width="320" height="75"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LyV-fd-dfw">
                                     <rect key="frame" x="18" y="19" width="36" height="36"/>
@@ -92,14 +82,14 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz1-6f-qfU">
-                            <rect key="frame" x="20" y="342" width="75" height="93"/>
+                            <rect key="frame" x="20" y="112" width="75" height="93"/>
                             <state key="normal" title="Hate" image="IhateButtonOff.png"/>
                             <connections>
                                 <action selector="performRating:" destination="-1" eventType="touchUpInside" id="giR-kp-4Ds"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPD-pJ-IVW">
-                            <rect key="frame" x="123" y="342" width="75" height="93"/>
+                            <rect key="frame" x="123" y="112" width="75" height="93"/>
                             <state key="normal" title="Like" image="IlikeButtonOff.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -108,7 +98,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T3-t1-M6f">
-                            <rect key="frame" x="225" y="342" width="75" height="98.5"/>
+                            <rect key="frame" x="225" y="112" width="75" height="98.5"/>
                             <state key="normal" title="Love" image="IloveButtonOff.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -127,6 +117,17 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>
+        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" id="7ed-9c-hyi">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="0.96078437569999997" green="0.95686280729999995" blue="0.86666673419999996" alpha="1" colorSpace="deviceRGB"/>
+            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vs2-TP-5Xr">
+                <size key="itemSize" width="320" height="240"/>
+                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            </collectionViewFlowLayout>
+        </collectionView>
     </objects>
     <resources>
         <image name="IhateButtonOff.png" width="75" height="93"/>
