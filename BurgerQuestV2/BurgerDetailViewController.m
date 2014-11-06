@@ -527,7 +527,7 @@
         CGRect svFrame = self.scrollView.frame;
         svFrame.size.height = [UIScreen mainScreen].bounds.size.height;
         [self.scrollView setFrame:svFrame];
-        [self.scrollView setContentSize:CGSizeMake(320.0f, cheight)];
+        [self.scrollView setContentSize:CGSizeMake(320.0f, cheight + 60)];
         
         [BQNotif showDoneWithStatus:nil];
         
@@ -551,7 +551,7 @@
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     [flowLayout setMinimumInteritemSpacing:0.0f];
     [flowLayout setMinimumLineSpacing:0.0f];
-    [flowLayout setItemSize:CGSizeMake(320, 240)];
+    [flowLayout setItemSize:CGSizeMake(320, 340)];
     [self.imagesCollectionView setCollectionViewLayout:flowLayout];
     [self.imagesCollectionView registerClass:[DetailGalleryCell class] forCellWithReuseIdentifier:@"detailCellIdentifier"];
 }
