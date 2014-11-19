@@ -30,6 +30,8 @@
 		380ACE5A197EC7DB00225D28 /* paris.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 380ACE59197EC7DB00225D28 /* paris.gpx */; };
 		38155AE41A0B7D6400055502 /* UIScrollView+APParallaxHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 38155AE21A0B7D6400055502 /* UIScrollView+APParallaxHeader.h */; };
 		38155AE51A0B7D6400055502 /* UIScrollView+APParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 38155AE31A0B7D6400055502 /* UIScrollView+APParallaxHeader.m */; };
+		38155AE81A0CDF7900055502 /* LeftMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 38155AE61A0CDF7900055502 /* LeftMenuBackground.png */; };
+		38155AE91A0CDF7900055502 /* LeftMenuBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38155AE71A0CDF7900055502 /* LeftMenuBackground@2x.png */; };
 		3815A333195AB62B00317552 /* P 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3815A329195AB62B00317552 /* P 10.png */; };
 		3815A334195AB62B00317552 /* P 10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3815A32A195AB62B00317552 /* P 10@2x.png */; };
 		3815A335195AB62B00317552 /* P HELP.png in Resources */ = {isa = PBXBuildFile; fileRef = 3815A32B195AB62B00317552 /* P HELP.png */; };
@@ -288,6 +290,8 @@
 		380ACE59197EC7DB00225D28 /* paris.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = paris.gpx; sourceTree = "<group>"; };
 		38155AE21A0B7D6400055502 /* UIScrollView+APParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+APParallaxHeader.h"; sourceTree = "<group>"; };
 		38155AE31A0B7D6400055502 /* UIScrollView+APParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+APParallaxHeader.m"; sourceTree = "<group>"; };
+		38155AE61A0CDF7900055502 /* LeftMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftMenuBackground.png; sourceTree = "<group>"; };
+		38155AE71A0CDF7900055502 /* LeftMenuBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LeftMenuBackground@2x.png"; sourceTree = "<group>"; };
 		3815A329195AB62B00317552 /* P 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "P 10.png"; sourceTree = "<group>"; };
 		3815A32A195AB62B00317552 /* P 10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "P 10@2x.png"; sourceTree = "<group>"; };
 		3815A32B195AB62B00317552 /* P HELP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "P HELP.png"; sourceTree = "<group>"; };
@@ -1202,6 +1206,8 @@
 		38EDC8551909A71700C9F68B /* v2 */ = {
 			isa = PBXGroup;
 			children = (
+				38155AE61A0CDF7900055502 /* LeftMenuBackground.png */,
+				38155AE71A0CDF7900055502 /* LeftMenuBackground@2x.png */,
 				38845A7219E7E41700C6B62A /* PictoShare.png */,
 				38845A7319E7E41700C6B62A /* PictoShare@2x.png */,
 				3823589E19D58C060056DEE2 /* YellowPin@2x.png */,
@@ -1435,6 +1441,7 @@
 				38EDC847190693EC00C9F68B /* DINMed.ttf in Resources */,
 				38FC80F719221ACC005E8B43 /* NavigationBack.png in Resources */,
 				384F4B8C197C3E1500B57CEC /* picto_love@2x.png in Resources */,
+				38155AE91A0CDF7900055502 /* LeftMenuBackground@2x.png in Resources */,
 				38EDC8591909A72B00C9F68B /* OrangeBackgroundButton.png in Resources */,
 				3803AD7B1953486B005817E9 /* AvatarNoSignIn@2x.png in Resources */,
 				3815A33A195AB62B00317552 /* P INFO@2x.png in Resources */,
@@ -1454,6 +1461,7 @@
 				3815A336195AB62B00317552 /* P HELP@2x.png in Resources */,
 				384F4B89197C3E1500B57CEC /* picto_like.png in Resources */,
 				3803E72B18EABBD30043AD1B /* SignUpViewController.xib in Resources */,
+				38155AE81A0CDF7900055502 /* LeftMenuBackground.png in Resources */,
 				3889258D18BBD9B500B2D576 /* CHANGELOG.md in Resources */,
 				383D18FA1970361B00340389 /* IlikeButtonOff@2x.png in Resources */,
 				3873A44118E4A23800812A1C /* AuthentViewController.xib in Resources */,

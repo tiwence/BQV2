@@ -12,7 +12,7 @@
                 <outlet property="helpusButton" destination="s7P-zg-jdK" id="EKD-au-tMo"/>
                 <outlet property="homeButton" destination="AiB-Pw-stg" id="bdk-NU-Fqt"/>
                 <outlet property="lastButton" destination="hBz-dD-OzZ" id="pu2-tC-P0u"/>
-                <outlet property="logoutButton" destination="Eam-UG-Ndi" id="neM-yJ-1kz"/>
+                <outlet property="logoutButton" destination="2lz-D6-Myd" id="UOJ-5U-Zfb"/>
                 <outlet property="top10Button" destination="IcA-wf-A2G" id="NmL-CR-fwT"/>
                 <outlet property="userImageView" destination="Jt2-8F-dix" id="Tqz-a5-XLq"/>
                 <outlet property="userNameLabel" destination="oxS-LW-ZKn" id="Xm1-6p-OX4"/>
@@ -24,6 +24,10 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeftMenuBackground.png" id="h8L-E8-wc5">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Jt2-8F-dix">
                     <rect key="frame" x="64" y="54" width="90" height="90"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -99,16 +103,6 @@
                         <color key="titleShadowColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Eam-UG-Ndi">
-                    <rect key="frame" x="94" y="484" width="23" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <state key="normal" backgroundImage="LogoutButton.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="performLogout:" destination="-1" eventType="touchUpInside" id="EST-Xm-S1K"/>
-                    </connections>
-                </button>
                 <view contentMode="scaleToFill" id="IwP-7X-YE4">
                     <rect key="frame" x="38" y="47" width="135" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -154,6 +148,16 @@
                     <rect key="frame" x="51" y="294" width="200" height="1"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2lz-D6-Myd">
+                    <rect key="frame" x="94" y="484" width="23" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="LogoutButton.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="performLogout:" destination="-1" eventType="touchUpInside" id="8HJ-tc-qf5"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.27450981736183167" green="0.20000001788139343" blue="0.14509804546833038" alpha="1" colorSpace="deviceRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -163,6 +167,7 @@
         <image name="AvatarBorder.png" width="161" height="161"/>
         <image name="AvatarNoSignIn.png" width="81" height="81"/>
         <image name="BlueBackgroundButton.png" width="280" height="75"/>
+        <image name="LeftMenuBackground.png" width="320" height="568"/>
         <image name="LeftMenuSeparator.png" width="200" height="1"/>
         <image name="LogoutButton.png" width="23" height="27"/>
         <image name="P 10.png" width="11" height="14"/>

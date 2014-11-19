@@ -45,8 +45,35 @@
     hateButton.imageView.image = [UIImage imageNamed:@"IhateButtonOff.png"];
     likeButton.imageView.image = [UIImage imageNamed:@"IlikeButtonOff.png"];
     loveButton.imageView.image = [UIImage imageNamed:@"IloveButtonOff.png"];
+    [hateButton setImage:[UIImage imageNamed:@"IhateButtonOn.png"] forState:UIControlStateHighlighted];
+    [likeButton setImage:[UIImage imageNamed:@"IlikeButtonOn.png"] forState:UIControlStateHighlighted];
+    [loveButton setImage:[UIImage imageNamed:@"IloveButtonOn.png"] forState:UIControlStateHighlighted];
+    
+    //Display page control if needed
+    if ([[burger picture] count] > 1) {
+        CGRect pageControlFrame = self.burgerPicsPageControl.frame;
+        pageControlFrame.origin.y = 210.0f;
+        pageControlFrame.origin.x = 140.0f;
+        self.burgerPicsPageControl.frame = pageControlFrame;
+        [self.scrollView addSubview:burgerPicsPageControl];
+    } else {
+        [burgerPicsPageControl removeFromSuperview];
+    }
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self setupCollectionView];
+    self.scrollView.delegate = self;
+    [self.scrollView addParallaxWithView:self.imagesCollectionView andHeight:220.0f];
+    self.imagesCollectionView.dataSource = self;
+    self.imagesCollectionView.delegate = self;
+    [self.imagesCollectionView reloadData];
+    
+    //Get API engine
+    apiEngine = [[BurgerQuestAppDelegate sharedAppDelegate] apiEngine];
+    
+    commentsList = [[NSMutableArray alloc] init];
+    [self displayBurgerInfos];
 }
 
 - (void)viewDidLoad
@@ -74,20 +101,6 @@
                              forBarMetrics:UIBarMetricsDefault];
     self.navigationItem.titleView = navigationTitleView;
     
-    //Get API engine
-    apiEngine = [[BurgerQuestAppDelegate sharedAppDelegate] apiEngine];
-    
-    [self setupCollectionView];
-    self.imagesCollectionView.dataSource = self;
-    self.imagesCollectionView.delegate = self;
-
-    self.scrollView.delegate = self;
-    [self.scrollView addParallaxWithView:self.imagesCollectionView andHeight:220.0f];
-    
-    commentsList = [[NSMutableArray alloc] init];
-    [self displayBurgerInfos];
-    
-    [self.imagesCollectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -121,8 +134,8 @@
     self.restaurantNameLabel.text = burger.place.name;
     
     float rating = [burger.rating floatValue] * 2.0;
+    self.ratingLabel.text = [[FontUtils instance] stringForRating:rating];
     
-    self.ratingLabel.text = [NSString stringWithFormat:@"%.1f", rating];
     self.ratingsInfosLabel.text = [NSString stringWithFormat:@"%@", burger.count_rating];
     
     //address
@@ -184,7 +197,16 @@
                                                      alpha:1.0f].CGColor;
     [infosView.layer addSublayer:bottomBorder];
     
-    [self requestData];
+    self.scrollView.delegate = self;
+    CGRect svFrame = self.scrollView.frame;
+    svFrame.size.height = [UIScreen mainScreen].bounds.size.height;
+    [self.scrollView setFrame:svFrame];
+    [self.scrollView setContentSize:CGSizeMake(320.0f, [UIScreen mainScreen].bounds.size.height + 20)];
+    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
+        [self requestData];
+    });
+    
 }
 
 - (IBAction)performCamera:(id)sender {
@@ -247,7 +269,9 @@
                      }
                  }];
     } else {
-        [NSTimer scheduledTimerWithTimeInterval:1.2f target:self selector:@selector(performAuthent:) userInfo:nil repeats:NO];
+        
+        [self performAuthent:sender];
+        //[NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(performAuthent:) userInfo:nil repeats:NO];
     }
     
 }
@@ -527,7 +551,7 @@
         CGRect svFrame = self.scrollView.frame;
         svFrame.size.height = [UIScreen mainScreen].bounds.size.height;
         [self.scrollView setFrame:svFrame];
-        [self.scrollView setContentSize:CGSizeMake(320.0f, cheight + 60)];
+        [self.scrollView setContentSize:CGSizeMake(320.0f, cheight + 20)];
         
         [BQNotif showDoneWithStatus:nil];
         

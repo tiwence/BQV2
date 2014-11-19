@@ -55,8 +55,8 @@
     burgerNameLabel.text = _burger.name;
     restaurantLabel.text = _burger.place.name;
     float rating = [_burger.rating floatValue] * 2.0;
+    ratingLabel.text = [[FontUtils instance] stringForRating:rating];
     
-    ratingLabel.text = [NSString stringWithFormat:@"%.1f", rating];
     CGSize textSize = [[NSString stringWithFormat:@"%@", [_burger.place getDistanceInMeter]] sizeWithFont: distanceLabel.font
                          constrainedToSize:CGSizeMake(50.0f, CGFLOAT_MAX)
                              lineBreakMode:UILineBreakModeWordWrap];

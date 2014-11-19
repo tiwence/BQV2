@@ -18,5 +18,6 @@
 - (void) customizeTextField:(NSArray *)views;
 - (void) addOnclickLayers:(NSArray *)views;
 - (void) addRoundedCornersToView:(UIView *)view withTop:(CGFloat)t right:(CGFloat)r left:(CGFloat)l bottom:(CGFloat)b;
+- (NSString *)stringForRating:(float)_rating;
 
 @end

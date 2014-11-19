@@ -64,7 +64,7 @@
                                     <rect key="frame" x="278" y="12" width="30" height="30"/>
                                 </imageView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7d-o2-OIA">
-                                    <rect key="frame" x="278" y="11" width="30" height="30"/>
+                                    <rect key="frame" x="279" y="11" width="30" height="30"/>
                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                     <color key="textColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
                                     <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PictoUser.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Hs-sY-bd1">
-                                    <rect key="frame" x="280" y="49" width="12" height="12"/>
+                                    <rect key="frame" x="281" y="50" width="10" height="10"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,7 +118,7 @@
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>
         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" id="7ed-9c-hyi">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" red="0.96078437569999997" green="0.95686280729999995" blue="0.86666673419999996" alpha="1" colorSpace="deviceRGB"/>
             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vs2-TP-5Xr">
@@ -127,6 +127,7 @@
                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             </collectionViewFlowLayout>
+            <point key="canvasLocation" x="85" y="243"/>
         </collectionView>
     </objects>
     <resources>

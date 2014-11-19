@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MapPictureBackground.png" id="43Q-aw-kTX">
-                        <rect key="frame" x="10" y="11" width="300" height="244.5"/>
+                        <rect key="frame" x="10" y="11" width="300" height="245"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
                     <view contentMode="scaleToFill" id="8Ma-ya-g65">
@@ -32,11 +32,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PictoHeartLike.png" id="9tu-1x-spM">
-                        <rect key="frame" x="268" y="205" width="31" height="31"/>
+                        <rect key="frame" x="268" y="205" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7nv-gS-xqs">
-                        <rect key="frame" x="268" y="203.5" width="31" height="31.5"/>
+                        <rect key="frame" x="269" y="204" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                         <color key="textColor" red="0.95294123888015747" green="0.50980395078659058" blue="0.17647059261798859" alpha="1" colorSpace="deviceRGB"/>
@@ -105,7 +105,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="MapPictureBackground.png" width="161" height="161"/>
+        <image name="MapPictureBackground.png" width="640" height="1136"/>
         <image name="PictoBurgerGrey.png" width="12" height="10"/>
         <image name="PictoHeartLike.png" width="61" height="59"/>
         <image name="PictoPointerGrey.png" width="8" height="10"/>

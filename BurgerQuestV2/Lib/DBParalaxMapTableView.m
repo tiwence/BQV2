@@ -95,6 +95,10 @@
     return opened;
 }
 
+- (void)setIsOpened:(BOOL)_opened {
+    opened = _opened;
+}
+
 - (BOOL)scrollingUp {
     return scrollingUp;
 }
@@ -104,8 +108,7 @@
     return self.tableView.delegate;
 }
 
-- (void)setDelegate:(id<DBParalaxTableViewDelegate>)dlg
-{
+- (void)setDelegate:(id<DBParalaxTableViewDelegate>)dlg {
     if (_delegate != dlg)
     {
         _delegate = dlg;
@@ -144,8 +147,6 @@
             headerFrame.origin.y = kMapHeaderOffsetY - scrollOffset;
         [self.bqAnnotationDelegate hideSearchView:YES];
         opened = YES;
-        
-        float myOffset = scrollOffset + kMapHeaderOffsetY;
         
         //NSLog(@"%f | %f", scrollOffset + kMapHeaderOffsetY, self.tableView.frame.origin.y);
         

@@ -22,7 +22,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PictoHeartLike.png" translatesAutoresizingMaskIntoConstraints="NO" id="aFt-jw-Smy">
-                        <rect key="frame" x="267" y="205" width="30" height="30"/>
+                        <rect key="frame" x="268" y="205" width="30" height="30"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Niu-Ld-xRF">
                         <rect key="frame" x="20" y="207" width="36" height="36"/>
@@ -49,7 +49,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10.0" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UZ-av-KNs">
-                        <rect key="frame" x="267" y="204" width="30" height="30"/>
+                        <rect key="frame" x="269" y="204" width="30" height="30"/>
                         <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                         <color key="textColor" red="0.95294123890000004" green="0.50980395079999996" blue="0.1764705926" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
@@ -69,7 +69,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="MapPictureBackground.png" width="161" height="161"/>
+        <image name="MapPictureBackground.png" width="640" height="1136"/>
         <image name="PictoHeartLike.png" width="61" height="59"/>
         <image name="PictoUser.png" width="9" height="9"/>
     </resources>

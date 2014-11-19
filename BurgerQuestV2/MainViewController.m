@@ -134,6 +134,7 @@
         CGPoint offset = self.burgersListMapTableView.tableView.contentOffset;
         offset.y = 0;
         self.burgersListMapTableView.tableView.contentOffset = offset;
+        [self.burgersListMapTableView setIsOpened:NO];
         /*[self.burgersListMapTableView.tableView scrollToRowAtIndexPath: // use the method
          [NSIndexPath indexPathForRow:0     // get 2nd row (nth row...)
                             inSection:0]    // in 1st section (...)
@@ -575,7 +576,8 @@
             [lbl setFont:[UIFont italicSystemFontOfSize:18.0f]];
             lbl.tag = annotationRating;
             lbl.textAlignment = NSTextAlignmentCenter;
-            lbl.text = [NSString stringWithFormat:@"%.1f", annotationRating];
+            lbl.text = [[FontUtils instance] stringForRating:annotationRating];
+        
             [[FontUtils instance] customizeWithFonts:[NSMutableArray arrayWithObjects:lbl, nil]];
             [pinView addSubview:lbl];
             lbl = nil;

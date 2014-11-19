@@ -150,4 +150,13 @@ static inline UIImage* MTDContextCreateRoundedMask( CGRect rect, CGFloat radius_
     return theImage;
 }
 
+-(NSString *)stringForRating:(float)_rating {
+    NSString *ratingString = [NSString stringWithFormat:@"%.1f", _rating];
+    if ([ratingString rangeOfString:@".0"].location > 0 && [ratingString rangeOfString:@".0"].location < ratingString.length) {
+        return [ratingString substringToIndex:[ratingString rangeOfString:@".0"].location];
+    } else {
+        return ratingString;
+    }
+}
+
 @end

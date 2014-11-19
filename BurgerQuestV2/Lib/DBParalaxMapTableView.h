@@ -37,6 +37,7 @@
 
 - (id)initWithFrame:(CGRect)frame delegate:(id<DBParalaxTableViewDelegate>)delegate dataSource:(id<DBParalaxTableViewDataSource>)dataSource;
 - (BOOL)isOpened;
+- (void)setIsOpened:(BOOL)_opened;
 - (BOOL)scrollingUp;
 
 @end

@@ -30,7 +30,7 @@
     
     burgerNameLabel.text = _burger.name;
     float rating = [_burger.rating floatValue] * 2.0;
-    ratingLabel.text = [NSString stringWithFormat:@"%.1f", rating];
+    ratingLabel.text = [[FontUtils instance] stringForRating:rating];
     usersLabel.text = [NSString stringWithFormat:@"%d", [_burger.count_rating integerValue]];
     
     NSString *userN = @"";
