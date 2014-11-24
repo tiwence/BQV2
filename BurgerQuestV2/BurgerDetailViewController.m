@@ -551,7 +551,8 @@
         CGRect svFrame = self.scrollView.frame;
         svFrame.size.height = [UIScreen mainScreen].bounds.size.height;
         [self.scrollView setFrame:svFrame];
-        [self.scrollView setContentSize:CGSizeMake(320.0f, cheight + 20)];
+        
+        [self.scrollView setContentSize:CGSizeMake(320.0f, cheight + 120)];
         
         [BQNotif showDoneWithStatus:nil];
         

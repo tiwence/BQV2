@@ -66,6 +66,10 @@
 		381673261920331000E75E95 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381673251920331000E75E95 /* AddressBook.framework */; };
 		38170D2C1962B4A100F05B98 /* DBParalaxMapTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38170D2A1962B4A100F05B98 /* DBParalaxMapTableView.h */; };
 		38170D2D1962B4A100F05B98 /* DBParalaxMapTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38170D2B1962B4A100F05B98 /* DBParalaxMapTableView.m */; };
+		381AD4161A1E4A080010F87E /* OrangePinIOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 381AD4151A1E4A080010F87E /* OrangePinIOS7@2x.png */; };
+		381AD4191A1E4C310010F87E /* RedPinIOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 381AD4171A1E4C300010F87E /* RedPinIOS7@2x.png */; };
+		381AD41A1A1E4C310010F87E /* YellowPinIOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 381AD4181A1E4C300010F87E /* YellowPinIOS7@2x.png */; };
+		381AD41E1A1E55720010F87E /* HeaderLogoIOS8.png in Resources */ = {isa = PBXBuildFile; fileRef = 381AD41D1A1E55720010F87E /* HeaderLogoIOS8.png */; };
 		3823589F19D58C060056DEE2 /* YellowPin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3823589E19D58C060056DEE2 /* YellowPin@2x.png */; };
 		382358A119D58C0D0056DEE2 /* RedPin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 382358A019D58C0D0056DEE2 /* RedPin@2x.png */; };
 		382358A319D58C1D0056DEE2 /* OrangePin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 382358A219D58C1D0056DEE2 /* OrangePin@2x.png */; };
@@ -329,6 +333,10 @@
 		381673251920331000E75E95 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		38170D2A1962B4A100F05B98 /* DBParalaxMapTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBParalaxMapTableView.h; sourceTree = "<group>"; };
 		38170D2B1962B4A100F05B98 /* DBParalaxMapTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBParalaxMapTableView.m; sourceTree = "<group>"; };
+		381AD4151A1E4A080010F87E /* OrangePinIOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrangePinIOS7@2x.png"; sourceTree = "<group>"; };
+		381AD4171A1E4C300010F87E /* RedPinIOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedPinIOS7@2x.png"; sourceTree = "<group>"; };
+		381AD4181A1E4C300010F87E /* YellowPinIOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YellowPinIOS7@2x.png"; sourceTree = "<group>"; };
+		381AD41D1A1E55720010F87E /* HeaderLogoIOS8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderLogoIOS8.png; sourceTree = "<group>"; };
 		3823589E19D58C060056DEE2 /* YellowPin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YellowPin@2x.png"; sourceTree = "<group>"; };
 		382358A019D58C0D0056DEE2 /* RedPin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedPin@2x.png"; sourceTree = "<group>"; };
 		382358A219D58C1D0056DEE2 /* OrangePin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrangePin@2x.png"; sourceTree = "<group>"; };
@@ -1206,6 +1214,10 @@
 		38EDC8551909A71700C9F68B /* v2 */ = {
 			isa = PBXGroup;
 			children = (
+				381AD4171A1E4C300010F87E /* RedPinIOS7@2x.png */,
+				381AD41D1A1E55720010F87E /* HeaderLogoIOS8.png */,
+				381AD4181A1E4C300010F87E /* YellowPinIOS7@2x.png */,
+				381AD4151A1E4A080010F87E /* OrangePinIOS7@2x.png */,
 				38155AE61A0CDF7900055502 /* LeftMenuBackground.png */,
 				38155AE71A0CDF7900055502 /* LeftMenuBackground@2x.png */,
 				38845A7219E7E41700C6B62A /* PictoShare.png */,
@@ -1417,6 +1429,7 @@
 				38EDC8691909BBEC00C9F68B /* PictoUser@2x.png in Resources */,
 				38DF013D1982959B0025D4BC /* RedPin.png in Resources */,
 				3815A334195AB62B00317552 /* P 10@2x.png in Resources */,
+				381AD41E1A1E55720010F87E /* HeaderLogoIOS8.png in Resources */,
 				38EDC86C1909C1BA00C9F68B /* HeaderLogo.png in Resources */,
 				389E777C18BCA44D00F01F5E /* LeftMenuViewController.xib in Resources */,
 				38FC810619295351005E8B43 /* PictoFocus.png in Resources */,
@@ -1437,6 +1450,7 @@
 				3815A341195AB80300317552 /* LeftMenuSeparator@2x.png in Resources */,
 				3889273B18BBF03500B2D576 /* MainWindow.xib in Resources */,
 				380ACE5A197EC7DB00225D28 /* paris.gpx in Resources */,
+				381AD4161A1E4A080010F87E /* OrangePinIOS7@2x.png in Resources */,
 				382358A319D58C1D0056DEE2 /* OrangePin@2x.png in Resources */,
 				38EDC847190693EC00C9F68B /* DINMed.ttf in Resources */,
 				38FC80F719221ACC005E8B43 /* NavigationBack.png in Resources */,
@@ -1448,6 +1462,7 @@
 				38EDC8581909A72B00C9F68B /* BlueBackgroundButton.png in Resources */,
 				38BF2E28191FD68C00458EE1 /* PictoLoading.png in Resources */,
 				38EDC85F1909AD3600C9F68B /* FacebookButton@2x.png in Resources */,
+				381AD41A1A1E4C310010F87E /* YellowPinIOS7@2x.png in Resources */,
 				388924B418BBD84100B2D576 /* Cyclone Background.otf in Resources */,
 				383D18F21970333C00340389 /* IloveButtonOn@2x.png in Resources */,
 				383D18F6197035D900340389 /* IhateButtonOff@2x.png in Resources */,
@@ -1481,6 +1496,7 @@
 				38EDC85B1909A93800C9F68B /* LogoV2@2x.png in Resources */,
 				38EDC8611909AE8700C9F68B /* TextFieldBackground@2x.png in Resources */,
 				38EDC87C190A610D00C9F68B /* PictoHeartLike.png in Resources */,
+				381AD4191A1E4C310010F87E /* RedPinIOS7@2x.png in Resources */,
 				38FC80FD19293118005E8B43 /* RightGreenArrow.png in Resources */,
 				38FC810319293995005E8B43 /* BurgerGalleryCell.xib in Resources */,
 				38EDC86D1909C1BA00C9F68B /* HeaderLogo@2x.png in Resources */,
@@ -1683,7 +1699,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Giiks .com (Y44MX59L2D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Giiks .com (Y44MX59L2D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/temarill/Documents/xcode-workspace/BurgerQuestApp",
@@ -1703,7 +1719,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ba950fb-a9a5-4e4e-a77a-1d84f3ae4917";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
@@ -1809,7 +1825,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Giiks .com (28NN484PYG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/temarill/Documents/xcode-workspace/BurgerQuestApp",
@@ -1829,7 +1845,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "586962c9-8981-4ab0-a7ac-b88ffbf91e5c";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
@@ -1844,7 +1860,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Giiks .com (Y44MX59L2D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Giiks .com (Y44MX59L2D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/temarill/Documents/xcode-workspace/BurgerQuestApp",
@@ -1864,7 +1880,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "DE0ED0AE-FB7D-48FE-A58F-6FD3F1D8BD20";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";

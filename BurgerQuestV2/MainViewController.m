@@ -34,7 +34,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
-    UIImage *navImage = [UIImage imageNamed:@"HeaderLogo@2x.png"];
+     UIImage *navImage = [UIImage imageNamed:@"HeaderLogo@2x.png"];
+    NSArray *vComp = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+    if ([[vComp objectAtIndex:0] intValue] < 8) {
+        navImage = [UIImage imageNamed:@"HeaderLogoIOS8.png"];
+    }
     if ([UIScreen mainScreen].scale < 2.0) {
         navImage = [UIImage imageNamed:@"HeaderLogo.png"];
     }
@@ -84,9 +88,12 @@
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     
-    [locationManager requestAlwaysAuthorization];
-    
-    //[locationManager startUpdatingLocation];
+    NSArray *vComp = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+    if ([[vComp objectAtIndex:0] intValue] >= 8) {
+        [locationManager requestAlwaysAuthorization];
+    } else {
+        [locationManager startUpdatingLocation];
+    }
     
     memoryAnnotations = [[NSMutableDictionary alloc] init];
     
@@ -551,29 +558,53 @@
             } else {
                 annotationRating = [[annotation burger].rating floatValue] * 2.0;
             }
-            
+        
+            NSArray *vComp = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+            //if ([[vComp objectAtIndex:0] intValue] >= 8) {
+        
             if (annotationRating >= 8.5) {
-                if ([UIScreen mainScreen].scale < 2.0)
+                if ([UIScreen mainScreen].scale < 2.0) {
                     [pinView setImage:[UIImage imageNamed:@"RedPin.png"]];
-                else
-                    [pinView setImage:[UIImage imageNamed:@"RedPin@2x.png"]];
+                } else {
+                    if ([[vComp objectAtIndex:0] intValue] >= 8) {
+                        [pinView setImage:[UIImage imageNamed:@"RedPin@2x.png"]];
+                    } else {
+                        [pinView setImage:[UIImage imageNamed:@"RedPinIOS7@2x.png"]];
+                    }
+                }
             } else if (annotationRating >= 7.0 && annotationRating < 8.5) {
-                if ([UIScreen mainScreen].scale < 2.0)
+                if ([UIScreen mainScreen].scale < 2.0) {
                     [pinView setImage:[UIImage imageNamed:@"OrangePin.png"]];
-                else
-                    [pinView setImage:[UIImage imageNamed:@"OrangePin@2x.png"]];
+                } else {
+                    if ([[vComp objectAtIndex:0] intValue] >= 8) {
+                        [pinView setImage:[UIImage imageNamed:@"OrangePin@2x.png"]];
+                    } else {
+                        [pinView setImage:[UIImage imageNamed:@"OrangePinIOS7@2x.png"]];
+                    }
+                }
             } else {
-                if ([UIScreen mainScreen].scale < 2.0)
+                if ([UIScreen mainScreen].scale < 2.0) {
                     [pinView setImage:[UIImage imageNamed:@"YellowPin.png"]];
-                else
-                    [pinView setImage:[UIImage imageNamed:@"YellowPin@2x.png"]];
+                } else {
+                    if ([[vComp objectAtIndex:0] intValue] >= 8) {
+                        [pinView setImage:[UIImage imageNamed:@"YellowPin@2x.png"]];
+                    } else {
+                        [pinView setImage:[UIImage imageNamed:@"YellowPinIOS7@2x.png"]];
+                    }
+                }
             }
-            
-            UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, -2, pinView.frame.size.width, 30)];
+        
+            UILabel *lbl = nil;
+            if ([[vComp objectAtIndex:0] intValue] >= 8) {
+                lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, -2, pinView.frame.size.width, 30)];
+                [lbl setFont:[UIFont italicSystemFontOfSize:18.0f]];
+            } else {
+                lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 2, pinView.frame.size.width, 30)];
+                [lbl setFont:[UIFont italicSystemFontOfSize:22.0f]];
+            }
             lbl.backgroundColor = [UIColor clearColor];
             lbl.textColor = [UIColor whiteColor];
             lbl.alpha = 1.0;
-            [lbl setFont:[UIFont italicSystemFontOfSize:18.0f]];
             lbl.tag = annotationRating;
             lbl.textAlignment = NSTextAlignmentCenter;
             lbl.text = [[FontUtils instance] stringForRating:annotationRating];
